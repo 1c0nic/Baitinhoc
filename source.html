@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAI TIN HOC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0"/>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <section class="sub-header" id="HOME">
+        <nav>
+            <img src="Images/logo.jfif" class="logo">
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-circle-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#HOME">HOME</a></li>
+                    <li><a href="#team-page">ABOUT</a></li>
+                    <li><a href="#food-page">FOOD</a></li>
+                    <li><a href="#contact-page">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h2>CHÀO MỪNG BẠN ĐÃ TỚI TRANG WEB CỦA CTY TNHH HAI THÀNH VIÊN</h2>
+            <p>
+                Trang web này được tạo ra bởi Hải Tuấn và Thanh Nhã
+            </p>
+        </div>
+    </section>
+    <button id="totop">
+        <i class="material-icons">
+            north
+        </i>
+    </button>
+    <!-- TEAM -->
+    <section id="team-page">
+        <div class="row">
+            <h1>OUR TEAM</h1>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="img-container">
+                        <img src="Images/TUAN.png">
+                    </div>
+                    <a href="TUAN.html" target="blank" class="directory"><h3>Nguyễn Đoàn Hải Tuấn</h3></a>
+                    <p>Programmer</p>
+                    <div class="icons Tuan">
+                        <a href="https://www.facebook.com/profile.php?id=100027521473499" target="blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/haituansss/" target="blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/1c0nic" target="blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="img-container">
+                        <img src="Images/NHA.png">
+                    </div>
+                    <a href="NHA.html" target="blank" class="directory"><h3>Nguyễn Ngọc Thanh Nhã</h3></a>
+                    <p>Designer</p>
+                    <div class="icons Nha">
+                        <a href="https://www.facebook.com/ngocthanhnha.nguyen.77" target="blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/_.thanhnha.__/" target="blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
+    <!-- food -->
+     <section id="food-page">
+        <div class="container">
+            <div class="slider-wrapper">
+                <button id="prev-slide" class="slide-button material-symbols-rounded">
+                    chevron_left
+                </button>
+                <div class="image-list">
+                    <img src="Images/BUNBOHUE.jfif" alt="bun bo hue" class="image-item">
+                    <img src="Images/CAOLAU.jpg" alt="Cao lau" class="image-item">
+                    <img src="Images/BUNDAUMAMTOM.jfif" alt="bun dau mam tom" class="image-item">
+                    <img src="Images/MIQUANG.jfif" alt="mi quang" class="image-item">
+                    <img src="Images/PHO.jfif" alt="PHO" class="image-item">
+                </div>
+                <button id="next-slide" class="slide-button material-symbols-rounded">
+                    chevron_right
+                </button>
+            </div>
+            <div class="slider-scrollbar">
+                <div class="scrollbar-track">
+                    <div class="scrollbar-thumb">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- contact -->
+     <section id="contact-page">
+        <div class="contaner">
+            <div class="row">
+                <div class="contactL">
+                    <h1 class="sub-titile">Contact me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>NDHTuan2007@gmail.com</p> 
+                    <p><i class="fa-solid fa-phone"></i>0773060320</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100027521473499" target="blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </div>
+                    <a href="source.html" download class="btn btn2">Source Code</a>
+                </div>
+                <div class="contactR">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="email" placeholder="Your Email" required>
+                        <textarea type="text" name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p><em>Copyright © No reserve.</em></p>
+        </div>
+     </section>
+     <script >
+        const totop=document.querySelector("#totop");
+        totop.addEventListener("click",function(){
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: "smooth"
+            });
+        });
+        var navLinks= document.getElementById("navLinks")
+            function showMenu(){
+                navLinks.style.right="0";
+            }
+            function hideMenu(){
+                navLinks.style.right="-200px";
+            }
+     </script>
+</body>
+</html>
